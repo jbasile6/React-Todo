@@ -3,6 +3,8 @@ import TodoList from './components/TodoComponents/TodoList';
 import TodoForm from './components/TodoComponents/TodoForm';
 import Todo from './components/TodoComponents/Todo.js'
 
+import './App.css'
+
 const todoListData = [
   {
     task: 'Learn User Interface and Git',
@@ -62,7 +64,7 @@ class App extends React.Component {
   };
   
   addItem = (e, item) => {
-    e.preventDefault;
+    e.preventDefault();
     const newItem = {
       task: item,
       id: addNewId(),
@@ -101,7 +103,7 @@ class App extends React.Component {
       <div className="todo-app">
         <div className="header">
         <h1>To Do List</h1>
-        <TodoForm />
+        <TodoForm addItem={this.addItem} />
         </div>
         <TodoList
         todoListData={this.state.todoListData}
