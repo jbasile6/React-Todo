@@ -9,17 +9,16 @@ import Todo from './Todo';
 
 
 const TodoList = props => {
+    const sortedTodoData = props.todoListData.sort((a,b) => a.completed - b.completed);
     return (
         <div className="toDoItem">
-            {props.todoitems.map( todo => {
-                <Todo
-                key={todo.id}
-                todo={todo}
-                markComplete={props.isComplete}
+           {sortedTodoData.map(item => (
+               <Todo 
+                key={item.id}
+                item={item}
+                toggleItem={props.toggleItem}
                 />
-            })}
-         
-        
+           ))}
         </div>
     );
 };
