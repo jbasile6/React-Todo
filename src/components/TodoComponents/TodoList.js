@@ -1,4 +1,5 @@
 import React from 'react';
+import Todo from './Todo';
 
 
 
@@ -6,19 +7,17 @@ import React from 'react';
 // feel free to change this component.js into TodoList.js
 
 
-//Component Layout
-// const TodoList = props => {
-//     return (
-//         <div>
-//             {props.*anything*.map( e => e.*something*)}
-//         </div>
-//     )
-// }
-
 
 const TodoList = props => {
     return (
-        <div className="toDoItem">>
+        <div className="toDoItem">
+            {props.todoitems.map( todo => {
+                <Todo
+                key={todo.id}
+                todo={todo}
+                markComplete={props.isComplete}
+                />
+            })}
          
         
         </div>

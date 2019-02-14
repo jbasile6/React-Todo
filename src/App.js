@@ -2,7 +2,7 @@ import React from 'react';
 import TodoList from './components/TodoComponents/TodoList';
 import TodoForm from './components/TodoComponents/TodoForm';
 
-const todoItems = [
+const todoListData = [
   {
     task: 'Learn User Interface and Git',
     id: 1,
@@ -12,27 +12,27 @@ const todoItems = [
     task: 'Learn Advanced CSS',
     id: 2,
     completed: false
-  }
+  },
   {
     task: 'Learn JavaScript Fundamentals',
     id: 3,
     completed: false
-  }
+  },
   {
     task: 'Learn Applied JavaScript',
     id: 4,
     completed: false
-  }
+  },
   {
     task: 'Complete Project Week: User Interface',
     id: 5,
     completed: false
-  }
+  },
   {
     task: 'Learn React',
     id: 6,
     completed: false
-  }
+  },
   {
     task: 'Learn Intermediate React',
     id: 7,
@@ -41,6 +41,7 @@ const todoItems = [
 ]
 
 let lastId = 7;
+//used to keep track of new item Ids
 const addNewId = () => {
   lastId++;
   return lastId;
@@ -51,21 +52,14 @@ const addNewId = () => {
 class App extends React.Component {
   constructor() {
     super();
-    this.state = {
-      todoItems: todoItems,
-      inputText: ''
+  
     };
   }
 
-  addtodoItem = todoItem => {
-    
-  }
-  // you will need a place to store your state in this component.
-  // design `App` to be the parent component of your application.
-  // this component is going to take care of state, and any change handlers you need to work with your state
+
   render() {
     return (
-      <div>
+      <div className="todo-app">
         <h2>Welcome to your Todo App!</h2>
       </div>
     );
