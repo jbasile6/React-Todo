@@ -1,0 +1,17 @@
+.completed {
+    color:red;
+}
+
+.todo-app {
+    margin:0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 600px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+}
